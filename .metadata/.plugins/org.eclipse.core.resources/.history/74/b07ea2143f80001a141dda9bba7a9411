@@ -1,7 +1,0 @@
-package com.kmstechnology.todolist.app.handlers;
-
-import org.eclipse.swt.events.SelectionAdapter;
-
-public class TodoDeleteListener extends SelectionAdapter {
-
-}

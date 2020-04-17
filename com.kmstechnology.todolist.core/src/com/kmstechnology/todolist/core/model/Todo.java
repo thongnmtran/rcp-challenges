@@ -20,7 +20,7 @@ public class Todo {
 		return todoString;
 	}
 
-	public void setTodo(String todoString) {
+	public void setText(String todoString) {
 		this.todoString = todoString;
 	}
 

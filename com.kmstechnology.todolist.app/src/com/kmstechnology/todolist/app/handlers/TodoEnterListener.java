@@ -18,12 +18,12 @@ public class TodoEnterListener implements KeyListener {
 	}
 
 	@Override
-	public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent event) {
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
-		if (e.keyCode == SWT.CR || e.keyCode == SWT.KEYPAD_CR) {
+	public void keyReleased(KeyEvent event) {
+		if (event.keyCode == SWT.CR || event.keyCode == SWT.KEYPAD_CR) {
 			this.todoAppPart.renderNewTodo();
 			this.txtTodo.setText("");
 		}
