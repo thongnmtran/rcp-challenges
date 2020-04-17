@@ -1,0 +1,25 @@
+package com.kmstechnology.todolist.core.model;
+
+import org.eclipse.swt.widgets.Composite;
+
+public class Todo {
+	private String todoString;
+	private Composite composite;
+
+	public Todo() {
+		super();
+	}
+
+	public Todo(String todoString) {
+		super();
+		this.todoString = todoString;
+	}
+
+	public String getText() {
+		return todoString;
+	}
+
+	public void setTodo(String todoString) {
+		this.todoString = todoString;
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Text"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Composite"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.KeyListener"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.ArrayContentProvider"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.DoubleClickEvent"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.IDoubleClickListener"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.IStructuredSelection"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DND"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.Transfer"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.TextTransfer"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DragSourceListener"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DragSourceAdapter"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DragSourceEvent"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.util.LocalSelectionTransfer"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.FileTransfer"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTarget"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTargetListener"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTargetAdapter"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTargetEvent"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DragSource"/>
+<fullyQualifiedTypeName name="com.kmstechnology.todolist.core.model.TodoList"/>
+<fullyQualifiedTypeName name="com.kmstechnology.todolist.core.model.Todo"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.kmstechnology.todolist.app.parts.TodoAppPart"/>
+</qualifiedTypeNameHistroy>

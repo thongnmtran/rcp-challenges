@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="com.kmstechnology.todolist.app" id="com.kmstechnology.todolist.app.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-clearPersistedState
+      </programArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="com.kmstechnology.todolist.feature" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.e4.rcp" version="1.5.3.v20170228-0512"/>
+      <feature id="org.eclipse.emf.ecore" version="2.12.0.v20160420-0247"/>
+      <feature id="org.eclipse.emf.common" version="2.12.0.v20160420-0247"/>
+   </features>
+
+
+</product>

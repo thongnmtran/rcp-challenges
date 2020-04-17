@@ -1,0 +1,14 @@
+package com.kmstechnology.todolist.app.handlers;
+
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+
+public class TodoDeleteListener extends SelectionAdapter {
+	@Override
+	public void widgetSelected(SelectionEvent e) {
+		Date now = new Date();
+		label.setText(now.toString());
+		// Causes the receiver to be resized to its preferred size.
+		label.pack();
+	}
+}

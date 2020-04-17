@@ -1,0 +1,8 @@
+1587015654609	Rename package 'parts'
+1587015920493	Rename package 'com.kmstechnology.todolist.parts'
+1587015947540	Rename package 'handlers'
+1587016471603	Delete element
+1587016666804	Rename type 'SamplePart'
+1587021355036	Rename field 'textTodo'
+1587021751584	Delete element
+1587080090159	Rename method 'refreshTodoList'

@@ -1,0 +1,46 @@
+package com.kmstechnology.todolist.app.handlers;
+
+import java.util.List;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.KeyEvent;
+import org.eclipse.swt.events.KeyListener;
+
+public class TodoEnterListener implements KeyListener{
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+//	private final String newTodo;
+//	private static TodoList todoList;
+//
+//	public TodoEnterListener(String newTodo) {
+//		super();
+//		this.newTodo = newTodo;
+//	}
+//
+//	@Override
+//	public void keyPressed(KeyEvent e) {
+//		if (e.keyCode==SWT.CR || e.keyCode==SWT.KEYPAD_CR){
+//			this.todoList = TodoAppPart.getTodoList();
+//			this.todoList.add(this.newTodo);
+//		}
+//		
+//	}
+//
+//	@Override
+//	public void keyReleased(KeyEvent e) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+	
+	
+}

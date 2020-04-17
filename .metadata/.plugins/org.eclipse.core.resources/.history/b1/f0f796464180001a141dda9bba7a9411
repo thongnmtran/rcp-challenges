@@ -1,0 +1,98 @@
+package com.kmstechnology.todolist.app.parts;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+
+import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.model.application.ui.MDirtyable;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+
+import com.kmstechnology.todolist.app.handlers.TodoDeleteListener;
+import com.kmstechnology.todolist.app.handlers.TodoEnterListener;
+import com.kmstechnology.todolist.core.model.Todo;
+import com.kmstechnology.todolist.core.model.TodoList;
+
+public class TodoAppPart {
+
+	private Text txtInput;
+	private TodoList todoList = new TodoList();
+	private Composite parent;
+
+	@PostConstruct
+	public void createComposite(Composite parent) {
+		parent.setLayout(new GridLayout(1, false));
+		txtInput = new Text(parent, SWT.BORDER);
+		txtInput.setMessage("Enter new todo...");
+
+		txtInput.addKeyListener(new TodoEnterListener(this));
+		txtInput.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+		Composite todoListComposite = new Composite(parent, SWT.NONE);
+		this.parent = todoListComposite;
+		for (Todo todo : todoList.get()) {
+			Composite elementRowLayout = new Composite(todoListComposite, SWT.BORDER);
+
+			elementRowLayout.setLayout(new GridLayout(2, false));
+			elementRowLayout.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+			Label label = new Label(elementRowLayout, SWT.NONE);
+			label.setText(todo.getText());
+			label.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+			Button button = new Button(elementRowLayout, SWT.NONE);
+			button.setText("Delete");
+		}
+
+		// tableViewer = new TableViewer(parent, SWT.V_SCROLL);
+		//
+		// tableViewer.setContentProvider(ArrayContentProvider.getInstance());
+		// tableViewer.setInput(createInitialDataModel(parent));
+		// tableViewer.getTable().setLayoutData(new
+		// GridData(GridData.FILL_BOTH));
+	}
+
+	@Focus
+	public void setFocus() {
+	}
+
+	public Text getTxtInput() {
+		return txtInput;
+	}
+
+	public void renderNewTodo() {
+		String todo = txtInput.getText();
+//		if (parent.getChildren().length > 1 && parent.getChildren()[1] != null
+//				&& !parent.getChildren()[1].isDisposed()) {
+//			parent.getChildren()[1].dispose();
+//		}
+
+		Composite elementRowLayout = new Composite(parent, SWT.BORDER);
+		elementRowLayout.setLayout(new GridLayout(2, false));
+		elementRowLayout.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+
+		Label label = new Label(elementRowLayout, SWT.NONE);
+		label.setText(todo);
+		label.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+		Button button = new Button(elementRowLayout, SWT.NONE);
+		button.setText("Delete");
+		button.addSelectionListener(new TodoDeleteListener());
+		parent.g
+		
+		Todo elementData = handleAddTodo(elementRowLayout);
+		button.setData(elementData);
+		parent.layout(true, true);
+		// parent.requestLayout();
+		// parent.pack();
+	}
+
+	public Todo handleAddTodo(int ID) {
+		return todoList.add(txtInput.getText(), composite);
+	}
+}

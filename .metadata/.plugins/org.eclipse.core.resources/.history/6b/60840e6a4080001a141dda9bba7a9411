@@ -1,0 +1,36 @@
+package com.kmstechnology.todolist.core.model;
+
+import org.eclipse.swt.widgets.Composite;
+
+public class Todo {
+	private int ID;
+	private String todoString;
+//	private Composite composite;
+
+	public Todo() {
+		super();
+	}
+
+	public Todo(int ID, String todoString) {
+		super();
+		this.ID = ID;
+		this.todoString = todoString;
+//		this.composite = composite;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public String getText() {
+		return todoString;
+	}
+
+	public void setTodo(String todoString) {
+		this.todoString = todoString;
+	}
+}
