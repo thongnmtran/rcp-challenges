@@ -11,23 +11,21 @@ public class TodoEnterListener implements KeyListener {
 	private final TodoAppPart todoAppPart;
 	private final Text txtTodo;
 
-	public TodoEnterListener(Text textTodo, TodoAppPart todoAppPart) {
+	public TodoEnterListener(TodoAppPart todoAppPart) {
 		super();
-		this.txtTodo = textTodo;
+		this.txtTodo = todoAppPart.getTxtInput();
 		this.todoAppPart = todoAppPart;
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (e.keyCode == SWT.CR || e.keyCode == SWT.KEYPAD_CR) {
-			todoAppPart.handleAddTodo(txtTodo.getText());
-		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		if (e.keyCode == SWT.CR || e.keyCode == SWT.KEYPAD_CR) {
+			this.todoAppPart.renderNewTodo();
+			this.txtTodo.setText("");
 		}
 	}
-
 }

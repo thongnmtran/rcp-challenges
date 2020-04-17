@@ -6,3 +6,4 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: KMSTECHNOLOGY
 Export-Package: com.kmstechnology.todolist.core.model
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.eclipse.swt.widgets
