@@ -12,6 +12,10 @@
                name="applicationCSS"
                value="platform:/plugin/com.kmstechnology.todolist.app/css/default.css">
          </property>
+         <property
+               name="appName"
+               value="com.kmstechnology.todolist.app">
+         </property>
       </product>
    </extension>
 
