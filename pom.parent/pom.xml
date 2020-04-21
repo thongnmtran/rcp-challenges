@@ -5,20 +5,10 @@
 	<artifactId>com.kmstechnology.todolist.pom.parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Note me Parent pom</name>
-
-	<prerequisites>
-		<maven>3.0</maven>
-	</prerequisites>
+	<name>Pom Parent</name>
 
 	<properties>
 		<tycho.version>0.22.0</tycho.version>
-		<jacoco.version>0.8.5</jacoco.version>
-		<gmavenplus.version>1.5</gmavenplus.version>
-		<maven-compiler.version>3.1</maven-compiler.version>
-		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
-		<platform.version>1.0.15</platform.version>
-
 		<eclipse_update_site>https://download.eclipse.org</eclipse_update_site>
 		<eclipse_repo_url>${eclipse_update_site}/eclipse/updates/4.6/</eclipse_repo_url>
 	</properties>
@@ -38,33 +28,14 @@
 	</repositories>
 
 	<modules>
+		<module>../com.kmstechnology.todolist.app</module>
 		<module>../com.kmstechnology.todolist.core</module>
 		<module>../com.kmstechnology.todolist.feature</module>
 		<module>../com.kmstechnology.todolist.updatesite</module>
-
 		<module>../pom.product</module>
-		<module>../com.kmstechnology.todolist.app</module>
 	</modules>
 
 	<build>
-		<extensions>
-			<extension>
-				<groupId>co.leantechniques</groupId>
-				<artifactId>maven-buildtime-extension</artifactId>
-				<version>2.0.3</version>
-			</extension>
-		</extensions>
-
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.codehaus.gmavenplus</groupId>
-					<artifactId>gmavenplus-plugin</artifactId>
-					<version>${gmavenplus.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
@@ -90,14 +61,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho.version}</version>
 				<configuration>
-					<target>
-						<artifact>
-							<groupId>com.kms</groupId>
-							<artifactId>com.kms.katalon.target</artifactId>
-							<version>1.0.0-SNAPSHOT</version>
-						</artifact>
-					</target>
-					<!-- <pomDependencies>consider</pomDependencies> -->
+					<pomDependencies>consider</pomDependencies>
 					<environments>
 						<environment>
 							<os>linux</os>
@@ -126,61 +90,6 @@
 						</environment>
 					</environments>
 				</configuration>
-			</plugin>
-
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven-compiler.version}</version>
-				<configuration>
-					<compilerId>groovy-eclipse-compiler</compilerId>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.groovy</groupId>
-						<artifactId>groovy-eclipse-compiler</artifactId>
-						<version>2.9.2-01</version>
-					</dependency>
-					<dependency>
-						<groupId>org.codehaus.groovy</groupId>
-						<artifactId>groovy-eclipse-batch</artifactId>
-						<version>2.4.3-01</version>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<goals>
-							<goal>compile</goal>
-							<goal>testCompile</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven-compiler.version}</version>
-				<configuration>
-					<fork>true</fork>
-					<meminitial>128m</meminitial>
-					<maxmem>4096m</maxmem>
-					<compilerArgs>
-						<arg>-XX:MaxPermSize=128m</arg>
-					</compilerArgs>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
