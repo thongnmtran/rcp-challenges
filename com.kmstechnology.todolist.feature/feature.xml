@@ -16,6 +16,20 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="javax.inject"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.e4.ui.services"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.e4.core.di"/>
+      <import plugin="org.eclipse.e4.ui.di"/>
+      <import plugin="org.eclipse.e4.core.contexts"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.equinox.common" version="3.5.0" match="compatible"/>
+   </requires>
+
    <plugin
          id="com.kmstechnology.todolist.app"
          download-size="0"
@@ -25,6 +39,13 @@
 
    <plugin
          id="com.kmstechnology.todolist.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.director.app"
          download-size="0"
          install-size="0"
          version="0.0.0"

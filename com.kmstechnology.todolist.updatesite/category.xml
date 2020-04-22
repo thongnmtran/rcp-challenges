@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.kmstechnology.todolist.feature_1.0.0.qualifier.jar" id="com.kmstechnology.todolist.feature" version="1.0.0.qualifier"/>
+</site>

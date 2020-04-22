@@ -9,12 +9,32 @@
             name="com.kmstechnology.todolist.app"
             application="org.eclipse.e4.ui.workbench.swt.E4Application">
          <property
-               name="applicationCSS"
-               value="platform:/plugin/com.kmstechnology.todolist.app/css/default.css">
-         </property>
-         <property
                name="appName"
                value="com.kmstechnology.todolist.app">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="notemercp"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="Note Me">
+         <property
+               name="appName"
+               value="Note Me">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="customide"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Custom IDE">
+         <property
+               name="appName"
+               value="Custom IDE">
          </property>
       </product>
    </extension>
